@@ -6,7 +6,7 @@ public interface IUserRepository
 {
     IQueryable<User> Get();
 
-    ValueTask<User> GetByIdAsync(Guid id);
+    ValueTask<User?> GetByIdAsync(Guid id);
 
     ValueTask<User> CreateAsync(User user);
 
