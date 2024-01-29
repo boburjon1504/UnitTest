@@ -24,10 +24,10 @@ public class UserServiceTest
             FirstName = "Test",
             LastName = "Test",
             EmailAddress = "Test",
-            Password = "Test",
+            Password = "Testa",
         };
 
-        Action resultAction = async () => await userService.CreateAsync(user);
+        Action resultAction = () => userService.CreateAsync(user);
 
         resultAction.Should().Throw<FormatException>();
     }
