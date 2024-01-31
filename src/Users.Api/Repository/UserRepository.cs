@@ -9,7 +9,7 @@ public class UserRepository(AppDbContext dbContext) : IUserRepository
 {
     public async ValueTask<User> CreateAsync(User user)
     {
-        await dbContext.Users.AddAsync(user);
+        //await dbContext.Users.AddAsync(user);
 
         await dbContext.SaveChangesAsync();
 
@@ -29,17 +29,19 @@ public class UserRepository(AppDbContext dbContext) : IUserRepository
 
     public IQueryable<User> Get()
     {
-        return dbContext.Users;
+        return null;
+        //return dbContext.Users;
     }
 
     public async ValueTask<User?> GetByIdAsync(Guid id)
     {
-        return await dbContext.Users.FirstOrDefaultAsync(x => x.Id == id);
+        return await GetByIdAsync(id);
+        //return await dbContext.Users.FirstOrDefaultAsync(x => x.Id == id);
     }
 
     public async ValueTask<User> UpdateAsync(User user)
     {
-        dbContext.Users.Update(user);
+        //dbContext.Users.Update(user);
 
         await dbContext.SaveChangesAsync();
 
