@@ -6,7 +6,7 @@ public interface IUserRepository
 {
     IQueryable<User> Get();
 
-    ValueTask<User?> GetByIdAsync(Guid id);
+    ValueTask<dynamic?> GetByIdAsync<T>(Guid id) where T : class,IEntity;
 
     ValueTask<User> CreateAsync(User user);
 

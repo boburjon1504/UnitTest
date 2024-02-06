@@ -18,24 +18,25 @@ public class UserRepository(AppDbContext dbContext) : IUserRepository
 
     public async ValueTask<User> DeleteByIdAsync(Guid id)
     {
-        var user = await GetByIdAsync(id);
+        //var user = await GetByIdAsync(id);
 
-        dbContext.Remove(user);
+        //dbContext.Remove(user);
 
-        await dbContext.SaveChangesAsync();
+        //await dbContext.SaveChangesAsync();
 
-        return user;
+        return null ;
     }
 
     public IQueryable<User> Get()
     {
-        return null;
+        return dbContext.Users;
         //return dbContext.Users;
     }
 
-    public async ValueTask<User?> GetByIdAsync(Guid id)
+    public async ValueTask<dynamic?> GetByIdAsync<T>(Guid id) where T : class,IEntity
     {
-        return await GetByIdAsync(id);
+        return  await dbContext.FindAsync<T>(id);
+
         //return await dbContext.Users.FirstOrDefaultAsync(x => x.Id == id);
     }
 

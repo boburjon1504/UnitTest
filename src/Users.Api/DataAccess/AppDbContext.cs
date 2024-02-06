@@ -8,6 +8,9 @@ namespace Users.Api.DataAccess;
 public class AppDbContext(DbContextOptions options) : DbContext(options)
 {
     public DbSet<Order> Orders => Set<Order>();
+    public DbSet<Admin> Admins => Set<Admin>();
+    public DbSet<User> Users => Set<User>();
+    public DbSet<Student> Students => Set<Student>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -17,7 +20,6 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
 
         var order = typeof(IOrder);
 
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly,
-            x => x.GetInterfaces().Any(y => y.Name.Equals(nameof(IOrder))));
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
     }
 }

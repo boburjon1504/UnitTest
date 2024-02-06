@@ -8,6 +8,10 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 {
     public void Configure(EntityTypeBuilder<User> builder)
     {
-        builder.HasMany<Order>().WithOne().HasForeignKey(o => o.UserId);
+        builder
+            .ToTable("Users")
+            .HasDiscriminator(u => u.Role)
+            .HasValue<Admin>(Role.Admin)
+            .HasValue<Student>(Role.Student);
     }
 }
