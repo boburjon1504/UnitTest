@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Api", "Users.Api\User
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReflectionPractise", "ReflectionPractise\ReflectionPractise.csproj", "{4C136633-37EA-4401-881E-B851C617C85B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeBackgroundService", "PracticeBackgroundService\PracticeBackgroundService.csproj", "{8B16361A-E5A7-41EA-815E-BE9F1A532B93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticeBackgroundService", "PracticeBackgroundService\PracticeBackgroundService.csproj", "{8B16361A-E5A7-41EA-815E-BE9F1A532B93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MakeReflection", "MakeReflection\MakeReflection.csproj", "{2F355074-9413-4936-BB20-5C4AB227B380}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{8B16361A-E5A7-41EA-815E-BE9F1A532B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B16361A-E5A7-41EA-815E-BE9F1A532B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B16361A-E5A7-41EA-815E-BE9F1A532B93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F355074-9413-4936-BB20-5C4AB227B380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F355074-9413-4936-BB20-5C4AB227B380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F355074-9413-4936-BB20-5C4AB227B380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F355074-9413-4936-BB20-5C4AB227B380}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
