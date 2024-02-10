@@ -39,7 +39,6 @@ placeholder.ForEach(x =>
 
 Console.WriteLine($"After : {message}");
 
-
 foreach (var property in a)
 {
     Console.WriteLine(property.GetValue(user));
